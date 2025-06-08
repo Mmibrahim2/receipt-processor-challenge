@@ -172,3 +172,17 @@ the reviewing engineer.
 ### How long do I have to complete the exercise?
 There is no time limit for the exercise. Out of respect for your time, we designed this exercise with the intent that it should take you a few hours. But, please
 take as much time as you need to complete the work.
+
+
+### Update 
+
+main.go – Starts the web server and maps the two API endpoints (/receipts/process and /receipts/{id}/points) to their respective handlers.
+
+handlers.go – Defines logic for handling HTTP requests: processing a receipt and retrieving points based on ID.
+
+proccessorr.go – Encapsulates the rules logic that awards points for receipts based on the spec (e.g. round totals, time of purchase). Implements CalculatePoints() and all scoring rules based on receipt data
+
+store.go – Provides a simple, thread-safe in-memory data store using sync.RWMutex to store receipt IDs and their calculated points.
+
+models.go – Parses and stores incoming JSON receipt data, converting string fields like "price" and "total" to float64 for accurate math.
+
