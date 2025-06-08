@@ -174,7 +174,7 @@ There is no time limit for the exercise. Out of respect for your time, we design
 take as much time as you need to complete the work.
 
 
-### Update 
+# Update 
 
 main.go – Starts the web server and maps the two API endpoints (/receipts/process and /receipts/{id}/points) to their respective handlers.
 
